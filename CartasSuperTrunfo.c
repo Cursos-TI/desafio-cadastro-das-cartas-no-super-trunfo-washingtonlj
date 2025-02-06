@@ -1,22 +1,51 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+// Desafio do Super Trunfo - Jogo de Cartas de Cidades.
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    // Declaração das variáveis para armazenar os dados da cidade
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    char estado; // Letra do estado (A-H)
+    char codigo[4]; // Código da carta (ex: A01, B02)
+    char nomeCidade[50]; // Nome da cidade
+    int populacao; // Número de habitantes
+    float area; // Área total em km²
+    float pib; // Produto Interno Bruto da cidade
+    int pontosTuristicos; // Quantidade de pontos turísticos
+
+    // As linhas abaixo são para entrada de dados
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("Digite a letra do estado (A-H): ");
+    scanf(" %c", &estado); // Coloquei um espaço antes do %c para evitar problemas com o buffer
+
+    printf("Digite o código da carta (ex: A01, B02): ");
+    scanf("%s", codigo);
+
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]s", nomeCidade); // Lê uma string com espaços
+
+    printf("Digite a população da cidade: ");
+    scanf(" %d", &populacao); // Coloquei um espaço antes do %d para evitar problemas com o buffer
+
+    printf("Digite a área da cidade em km²: ");
+    scanf(" %f", &area); // Coloquei um espaço antes do %f para evitar problemas com o buffer
+
+    printf("Digite o PIB da cidade: ");
+    scanf(" %f", &pib); // Coloquei um espaço antes do %f para evitar problemas com o buffer
+
+    printf("Digite o número de pontos turísticos: ");
+    scanf(" %d", &pontosTuristicos); // Coloquei um espaço antes do %d para evitar problemas com o buffer
+
+    // As linhas abaixo são para exibição dos dados cadastrados
+    
+    printf("\n--- Dados da Carta ---\n");
+    printf("Estado: %c\n", estado);
+    printf("Código: %s\n", codigo);
+    printf("Cidade: %s\n", nomeCidade);
+    printf("População: %d\n", populacao);
+    printf("Área: %f km²\n", area);
+    printf("PIB: %f\n", pib);
+    printf("Pontos turísticos: %d\n", pontosTuristicos);
 
     return 0;
 }
